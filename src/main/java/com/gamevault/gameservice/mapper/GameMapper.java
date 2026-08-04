@@ -1,5 +1,6 @@
 package com.gamevault.gameservice.mapper;
 
+import com.gamevault.gameservice.dto.GameCreateRequest;
 import com.gamevault.gameservice.dto.GameDTO;
 import com.gamevault.gameservice.entity.Game;
 import org.modelmapper.ModelMapper;
@@ -14,6 +15,10 @@ public class GameMapper {
     }
     public GameDTO toDTO(Game game) {
         return modelMapper.map(game, GameDTO.class);
+    }
+
+    public Game toEntity(GameCreateRequest request) {
+        return modelMapper.map(request, Game.class);
     }
 
 }

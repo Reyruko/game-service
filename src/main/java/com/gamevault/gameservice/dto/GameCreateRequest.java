@@ -38,6 +38,5 @@ public class GameCreateRequest {
     @NotNull
     private Genre genre;
 
-
     private Set<Platform> platforms;
 }
