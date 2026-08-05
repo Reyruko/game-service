@@ -20,6 +20,7 @@ public class GameController {
         this.gameService = gameService;
     }
 
+    @GetMapping
     public List<GameDTO> getAllGames() {
         return gameService.getAllGames();
     }
