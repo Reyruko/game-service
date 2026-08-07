@@ -39,15 +39,20 @@ public class Game {
 
     private String coverImage;
 
-    @Column(nullable = false)
-    @Enumerated(EnumType.STRING)
-    private Genre genre;
+    @ManyToMany
+    @JoinTable(
+            name = "game_genres",
+            joinColumns = @JoinColumn(name = "game_id"),
+            inverseJoinColumns = @JoinColumn(name = "genre_id")
+    )
+    private Set<Genre> genres = new HashSet<>();
 
-    @ElementCollection(fetch = FetchType.EAGER)
-    @Enumerated(EnumType.STRING)
-    @CollectionTable(name = "game_platforms",
-            joinColumns = @JoinColumn(name = "game_id"))
-    @Column(name = "platform")
+    @ManyToMany
+    @JoinTable(
+            name = "game_platforms",
+            joinColumns = @JoinColumn(name = "game_id"),
+            inverseJoinColumns = @JoinColumn(name = "platform_id")
+    )
     private Set<Platform> platforms = new HashSet<>();
 
     private LocalDateTime createdOn;

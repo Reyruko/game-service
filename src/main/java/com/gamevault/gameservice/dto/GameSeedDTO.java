@@ -18,6 +18,6 @@ public class GameSeedDTO {
     private LocalDate releaseDate;
     private String description;
     private String coverImage;
-    private Genre genre;
-    private Set<Platform> platforms;
+    private Set<String> genres;
+    private Set<String> platforms;
 }

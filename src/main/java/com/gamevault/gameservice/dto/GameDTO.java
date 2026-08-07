@@ -1,7 +1,5 @@
 package com.gamevault.gameservice.dto;
 
-import com.gamevault.gameservice.entity.Genre;
-import com.gamevault.gameservice.entity.Platform;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -24,6 +22,6 @@ public class GameDTO {
     private LocalDate releaseDate;
     private String description;
     private String coverImage;
-    private Genre genre;
-    private Set<Platform> platforms;
+    private Set<GenreDTO> genres;
+    private Set<PlatformDTO> platforms;
 }
