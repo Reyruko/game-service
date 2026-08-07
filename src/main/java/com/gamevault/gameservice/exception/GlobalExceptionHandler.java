@@ -32,4 +32,20 @@ public class GlobalExceptionHandler{
                 .body(ex.getMessage());
     }
 
+    @ExceptionHandler(GenreNotFoundException.class)
+    public ResponseEntity<String> handleGenreNotFound(GenreNotFoundException ex) {
+
+        return ResponseEntity
+                .status(HttpStatus.NOT_FOUND)
+                .body(ex.getMessage());
+    }
+
+    @ExceptionHandler(PlatformNotFoundException.class)
+    public ResponseEntity<String> handlePlatformNotFound(PlatformNotFoundException ex) {
+
+        return ResponseEntity
+                .status(HttpStatus.NOT_FOUND)
+                .body(ex.getMessage());
+    }
+
 }
