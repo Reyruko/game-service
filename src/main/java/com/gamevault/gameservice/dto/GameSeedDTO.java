@@ -1,7 +1,6 @@
 package com.gamevault.gameservice.dto;
 
-import com.gamevault.gameservice.entity.Genre;
-import com.gamevault.gameservice.entity.Platform;
+
 import lombok.Getter;
 import lombok.Setter;
 
