@@ -4,21 +4,31 @@ import com.gamevault.gameservice.dto.GameCreateRequest;
 import com.gamevault.gameservice.dto.GameDTO;
 import com.gamevault.gameservice.dto.GameUpdateRequest;
 import com.gamevault.gameservice.entity.Game;
+import com.gamevault.gameservice.entity.Genre;
+import com.gamevault.gameservice.entity.Platform;
 import com.gamevault.gameservice.exception.GameAlreadyExistsException;
 import com.gamevault.gameservice.exception.GameNotFoundException;
+import com.gamevault.gameservice.exception.GenreNotFoundException;
+import com.gamevault.gameservice.exception.PlatformNotFoundException;
 import com.gamevault.gameservice.mapper.GameMapper;
 import com.gamevault.gameservice.repository.GameRepository;
+import com.gamevault.gameservice.repository.GenreRepository;
+import com.gamevault.gameservice.repository.PlatformRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
 public class GameService {
 
+    private final GenreRepository genreRepository;
+    private final PlatformRepository platformRepository;
     private final GameRepository gameRepository;
     private final GameMapper mapper;
 
@@ -51,8 +61,13 @@ public class GameService {
             throw new GameAlreadyExistsException(request.getName());
         }
 
+        Set<Genre> genres = findGenres(request.getGenreIds());
+        Set<Platform> platforms = findPlatforms(request.getPlatformIds());
+
         Game game = mapper.toEntity(request);
         game.setSlug(slug);
+        game.setGenres(genres);
+        game.setPlatforms(platforms);
 
         return mapper.toDTO(gameRepository.save(game));
     }
@@ -71,15 +86,17 @@ public class GameService {
             throw new GameAlreadyExistsException(request.getName());
         }
 
+        Set<Genre> genres = findGenres(request.getGenreIds());
+        Set<Platform> platforms = findPlatforms(request.getPlatformIds());
+
         game.setName(request.getName());
         game.setDeveloper(request.getDeveloper());
         game.setPublisher(request.getPublisher());
-        game.setGenre(request.getGenre());
         game.setDescription(request.getDescription());
-        game.setPlatforms(request.getPlatforms());
+        game.setGenres(genres);
+        game.setPlatforms(platforms);
         game.setReleaseDate(request.getReleaseDate());
         game.setCoverImage(request.getCoverImage());
-
         game.setSlug(slug);
 
         return mapper.toDTO(gameRepository.save(game));
@@ -99,6 +116,28 @@ public class GameService {
                 .trim()
                 .replaceAll("[^a-z0-9\\s-]", "")
                 .replaceAll("\\s+", "-");
+    }
+
+    private Set<Genre> findGenres(Set<UUID> ids) {
+
+        List<Genre> genres = genreRepository.findAllById(ids);
+
+        if (genres.size() != ids.size()) {
+            throw new GenreNotFoundException();
+        }
+
+        return new HashSet<>(genres);
+    }
+
+    private Set<Platform> findPlatforms(Set<UUID> ids) {
+
+        List<Platform> platforms = platformRepository.findAllById(ids);
+
+        if (platforms.size() != ids.size()) {
+            throw new PlatformNotFoundException();
+        }
+
+        return new HashSet<>(platforms);
     }
 
 }
