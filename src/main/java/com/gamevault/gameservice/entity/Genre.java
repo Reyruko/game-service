@@ -1,29 +1,25 @@
 package com.gamevault.gameservice.entity;
 
-public enum Genre {
-    ACTION,
-    ACTION_ADVENTURE,
-    ADVENTURE,
-    BATTLE_ROYALE,
-    RPG,
-    JRPG,
-    MMORPG,
-    SHOOTER,
-    STRATEGY,
-    SIMULATION,
-    PUZZLE,
-    RACING,
-    SPORTS,
-    FIGHTING,
-    SURVIVAL,
-    HORROR,
-    SANDBOX,
-    MOBA,
-    PLATFORMER,
-    SOULSLIKE,
-    ROGUELIKE,
-    VISUAL_NOVEL,
-    INDIE,
-    FPS,
-    TACTICAL_RPG
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.util.UUID;
+
+@Entity
+@Table(name = "genres")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class Genre {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID id;
+
+    @Column(nullable = false, unique = true)
+    private String name;
 }
