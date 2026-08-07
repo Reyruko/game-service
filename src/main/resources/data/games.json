@@ -6,7 +6,7 @@
   "releaseDate": "2011-11-18",
   "description": "Sandbox game focused on exploration, building, crafting, and survival.",
   "coverImage": "",
-  "genre": "SANDBOX",
+  "genres": ["SANDBOX"],
   "platforms": ["PC", "PLAYSTATION", "XBOX", "SWITCH", "MOBILE"]
 },
 {
@@ -17,7 +17,7 @@
 "releaseDate": "2011-05-16",
 "description": "2D sandbox adventure with exploration, crafting, and boss progression.",
 "coverImage": "",
-"genre": "SANDBOX",
+  "genres": ["SANDBOX"],
 "platforms": ["PC", "PLAYSTATION", "XBOX", "SWITCH", "MOBILE"]
 },
 {
@@ -28,7 +28,7 @@
 "releaseDate": "2016-02-26",
 "description": "Relaxing farming simulator with RPG and life-simulation elements.",
 "coverImage": "",
-"genre": "SIMULATION",
+"genres": ["SIMULATION"],
 "platforms": ["PC", "PLAYSTATION", "XBOX", "SWITCH", "MOBILE"]
 },
 {
@@ -39,7 +39,7 @@
 "releaseDate": "2015-05-19",
 "description": "Open-world fantasy RPG following Geralt's search for Ciri.",
 "coverImage": "",
-"genre": "RPG",
+"genres": ["RPG"],
 "platforms": ["PC", "PLAYSTATION", "XBOX", "SWITCH"]
 },
 {
@@ -50,7 +50,7 @@
 "releaseDate": "2020-12-10",
 "description": "Open-world sci-fi RPG set in the sprawling Night City.",
 "coverImage": "",
-"genre": "RPG",
+"genres": ["RPG"],
 "platforms": ["PC", "PLAYSTATION", "XBOX"]
 },
 {
@@ -61,7 +61,7 @@
 "releaseDate": "2022-02-25",
 "description": "Open-world action RPG with challenging combat and exploration.",
 "coverImage": "",
-"genre": "SOULSLIKE",
+"genres": ["SOULSLIKE"],
 "platforms": ["PC", "PLAYSTATION", "XBOX"]
 },
 {
@@ -72,7 +72,7 @@
 "releaseDate": "2016-04-12",
 "description": "Dark fantasy action RPG known for demanding combat.",
 "coverImage": "",
-"genre": "SOULSLIKE",
+"genres": ["SOULSLIKE"],
 "platforms": ["PC", "PLAYSTATION", "XBOX"]
 },
 {
@@ -83,7 +83,7 @@
 "releaseDate": "2019-03-22",
 "description": "Action adventure focused on swordplay and precision timing.",
 "coverImage": "",
-"genre": "ACTION_ADVENTURE",
+"genres": ["ACTION_ADVENTURE"],
 "platforms": ["PC", "PLAYSTATION", "XBOX"]
 },
 {
@@ -94,7 +94,7 @@
 "releaseDate": "2023-08-03",
 "description": "Party-based RPG with deep roleplaying and tactical combat.",
 "coverImage": "",
-"genre": "RPG",
+"genres": ["RPG"],
 "platforms": ["PC", "PLAYSTATION", "XBOX"]
 },
 {
@@ -105,7 +105,7 @@
 "releaseDate": "2011-11-11",
 "description": "Open-world fantasy RPG set in the province of Skyrim.",
 "coverImage": "",
-"genre": "RPG",
+"genres": ["RPG"],
 "platforms": ["PC", "PLAYSTATION", "XBOX", "SWITCH"]
 },
 {
@@ -116,7 +116,7 @@
   "releaseDate": "2010-10-19",
   "description": "Post-apocalyptic RPG driven by player choice and factions.",
   "coverImage": "",
-  "genre": "RPG",
+  "genres": ["RPG"],
   "platforms": ["PC", "PLAYSTATION", "XBOX"]
 },
 {
@@ -127,7 +127,7 @@
   "releaseDate": "2018-10-26",
   "description": "Narrative-driven western adventure set in a changing frontier.",
   "coverImage": "",
-  "genre": "ACTION_ADVENTURE",
+  "genres": ["ACTION_ADVENTURE"],
   "platforms": ["PC", "PLAYSTATION", "XBOX"]
 },
   {
@@ -138,7 +138,7 @@
     "releaseDate": "2015-04-14",
     "description": "Open-world crime sandbox featuring three protagonists.",
     "coverImage": "",
-    "genre": "ACTION",
+    "genres": ["ACTION"],
     "platforms": ["PC", "PLAYSTATION", "XBOX"]
   },
   {
@@ -149,7 +149,7 @@
     "releaseDate": "2023-09-27",
     "description": "Competitive tactical shooter emphasizing teamwork and precision.",
     "coverImage": "",
-    "genre": "SHOOTER",
+    "genres": ["SHOOTER"],
     "platforms": ["PC"]
   },
   {
@@ -160,7 +160,7 @@
     "releaseDate": "2020-06-02",
     "description": "Character-based tactical shooter with strategic abilities.",
     "coverImage": "",
-    "genre": "SHOOTER",
+    "genres": ["SHOOTER"],
     "platforms": ["PC"]
   },
   {
@@ -171,7 +171,7 @@
     "releaseDate": "2020-03-20",
     "description": "Fast-paced first-person shooter with intense combat.",
     "coverImage": "",
-    "genre": "SHOOTER",
+    "genres": ["SHOOTER"],
     "platforms": ["PC", "PLAYSTATION", "XBOX", "SWITCH"]
   },
   {
@@ -182,7 +182,7 @@
     "releaseDate": "2009-10-27",
     "description": "Competitive multiplayer strategy game with unique champions.",
     "coverImage": "",
-    "genre": "STRATEGY",
+    "genres": ["STRATEGY"],
     "platforms": ["PC"]
   },
   {
@@ -193,7 +193,7 @@
     "releaseDate": "2013-07-09",
     "description": "Deep multiplayer strategy game built around team play.",
     "coverImage": "",
-    "genre": "STRATEGY",
+    "genres": ["STRATEGY"],
     "platforms": ["PC"]
   },
   {
@@ -204,7 +204,7 @@
     "releaseDate": "2004-11-23",
     "description": "Massively multiplayer online RPG set in Azeroth.",
     "coverImage": "",
-    "genre": "MMORPG",
+    "genres": ["MMORPG"],
     "platforms": ["PC"]
   },
   {
@@ -215,7 +215,7 @@
     "releaseDate": "2013-08-27",
     "description": "Story-rich MMORPG with raids, dungeons, and social features.",
     "coverImage": "",
-    "genre": "MMORPG",
+    "genres": ["MMORPG"],
     "platforms": ["PC", "PLAYSTATION", "XBOX"]
   },
   {
@@ -226,7 +226,7 @@
     "releaseDate": "2020-06-19",
     "description": "A narrative-driven action-adventure following Ellie on a journey of revenge.",
     "coverImage": "",
-    "genre": "ACTION_ADVENTURE",
+    "genres": ["ACTION_ADVENTURE"],
     "platforms": ["PLAYSTATION"]
   },
   {
@@ -237,7 +237,7 @@
     "releaseDate": "2022-11-09",
     "description": "Kratos and Atreus face the coming of Ragnarök in this mythic action epic.",
     "coverImage": "",
-    "genre": "ACTION",
+    "genres": ["ACTION"],
     "platforms": ["PLAYSTATION"]
   },
   {
@@ -248,7 +248,7 @@
     "releaseDate": "2015-03-24",
     "description": "A gothic action RPG set in the plague-ridden city of Yharnam.",
     "coverImage": "",
-    "genre": "ACTION",
+    "genres": ["ACTION"],
     "platforms": ["PLAYSTATION"]
   },
   {
@@ -259,7 +259,7 @@
     "releaseDate": "2018-09-07",
     "description": "Swing through New York City as Spider-Man in this open-world adventure.",
     "coverImage": "",
-    "genre": "ACTION_ADVENTURE",
+    "genres": ["ACTION_ADVENTURE"],
     "platforms": ["PLAYSTATION"]
   },
   {
@@ -270,7 +270,7 @@
     "releaseDate": "2022-02-18",
     "description": "Aloy explores new lands filled with mechanical beasts and ancient mysteries.",
     "coverImage": "",
-    "genre": "ACTION",
+    "genres": ["ACTION"],
     "platforms": ["PLAYSTATION"]
   },
   {
@@ -281,7 +281,7 @@
     "releaseDate": "2020-07-17",
     "description": "A samurai fights to reclaim Tsushima from Mongol invaders.",
     "coverImage": "",
-    "genre": "ACTION_ADVENTURE",
+    "genres": ["ACTION_ADVENTURE"],
     "platforms": ["PLAYSTATION"]
   },
   {
@@ -292,7 +292,7 @@
     "releaseDate": "2019-10-31",
     "description": "A stylish JRPG about rebellious Phantom Thieves changing hearts.",
     "coverImage": "",
-    "genre": "JRPG",
+    "genres": ["JRPG"],
     "platforms": ["PC", "PLAYSTATION", "XBOX", "SWITCH"]
   },
   {
@@ -303,7 +303,7 @@
     "releaseDate": "2022-03-04",
     "description": "A realistic racing simulator with hundreds of cars and tracks.",
     "coverImage": "",
-    "genre": "RACING",
+    "genres": ["RACING"],
     "platforms": ["PLAYSTATION"]
   },
   {
@@ -314,7 +314,7 @@
     "releaseDate": "2016-05-10",
     "description": "Nathan Drake embarks on one last treasure-hunting adventure.",
     "coverImage": "",
-    "genre": "ACTION_ADVENTURE",
+    "genres": ["ACTION_ADVENTURE"],
     "platforms": ["PLAYSTATION"]
   },
   {
@@ -325,7 +325,7 @@
     "releaseDate": "2020-04-10",
     "description": "A reimagining of the classic JRPG with modern combat and storytelling.",
     "coverImage": "",
-    "genre": "JRPG",
+    "genres": ["JRPG"],
     "platforms": ["PLAYSTATION", "PC"]
   },
   {
@@ -336,7 +336,7 @@
     "releaseDate": "2021-12-08",
     "description": "Master Chief returns in an open-world Halo adventure.",
     "coverImage": "",
-    "genre": "FPS",
+    "genres": ["FPS"],
     "platforms": ["PC", "XBOX"]
   },
   {
@@ -347,7 +347,7 @@
     "releaseDate": "2021-11-09",
     "description": "A massive open-world racing festival set in Mexico.",
     "coverImage": "",
-    "genre": "RACING",
+    "genres": ["RACING"],
     "platforms": ["PC", "XBOX"]
   },
   {
@@ -358,7 +358,7 @@
     "releaseDate": "2019-09-10",
     "description": "A third-person shooter following Kait Diaz’s journey.",
     "coverImage": "",
-    "genre": "SHOOTER",
+    "genres": ["SHOOTER"],
     "platforms": ["PC", "XBOX"]
   },
   {
@@ -369,7 +369,7 @@
     "releaseDate": "2023-09-06",
     "description": "A space exploration RPG with thousands of planets.",
     "coverImage": "",
-    "genre": "RPG",
+    "genres": ["RPG"],
     "platforms": ["PC", "XBOX"]
   },
   {
@@ -380,7 +380,7 @@
     "releaseDate": "2018-03-20",
     "description": "A shared-world pirate adventure with exploration and treasure hunting.",
     "coverImage": "",
-    "genre": "ADVENTURE",
+    "genres": ["ADVENTURE"],
     "platforms": ["PC", "XBOX"]
   },
   {
@@ -391,7 +391,7 @@
     "releaseDate": "2015-11-10",
     "description": "A post-apocalyptic RPG set in the ruins of Boston.",
     "coverImage": "",
-    "genre": "RPG",
+    "genres": ["RPG"],
     "platforms": ["PC", "PLAYSTATION", "XBOX"]
   },
   {
@@ -402,7 +402,7 @@
     "releaseDate": "2017-03-03",
     "description": "A groundbreaking open-world adventure in Hyrule.",
     "coverImage": "",
-    "genre": "ACTION_ADVENTURE",
+    "genres": ["ACTION_ADVENTURE"],
     "platforms": ["SWITCH"]
   },
   {
@@ -413,7 +413,7 @@
     "releaseDate": "2017-10-27",
     "description": "Mario travels the world with his sentient hat, Cappy.",
     "coverImage": "",
-    "genre": "PLATFORMER",
+    "genres": ["PLATFORMER"],
     "platforms": ["SWITCH"]
   },
   {
@@ -424,7 +424,7 @@
     "releaseDate": "2020-03-20",
     "description": "Build your dream island paradise with charming villagers.",
     "coverImage": "",
-    "genre": "SIMULATION",
+    "genres": ["SIMULATION"],
     "platforms": ["SWITCH"]
   },
   {
@@ -435,7 +435,7 @@
     "releaseDate": "2017-04-28",
     "description": "Fast-paced kart racing with iconic Nintendo characters.",
     "coverImage": "",
-    "genre": "RACING",
+    "genres": ["RACING"],
     "platforms": ["SWITCH"]
   },
   {
@@ -446,7 +446,7 @@
     "releaseDate": "2022-11-18",
     "description": "Open-world Pokémon adventure in the Paldea region.",
     "coverImage": "",
-    "genre": "RPG",
+    "genres": ["RPG"],
     "platforms": ["SWITCH"]
   },
   {
@@ -457,7 +457,7 @@
     "releaseDate": "2022-09-09",
     "description": "Colorful team-based ink battles with style.",
     "coverImage": "",
-    "genre": "SHOOTER",
+    "genres": ["SHOOTER"],
     "platforms": ["SWITCH"]
   },
   {
@@ -468,7 +468,7 @@
     "releaseDate": "2019-07-26",
     "description": "A tactical RPG with branching storylines and deep characters.",
     "coverImage": "",
-    "genre": "TACTICAL_RPG",
+    "genres": ["TACTICAL_RPG"],
     "platforms": ["SWITCH"]
   },
   {
@@ -479,7 +479,7 @@
     "releaseDate": "2021-10-08",
     "description": "Samus returns in a fast-paced 2D sci-fi adventure.",
     "coverImage": "",
-    "genre": "ACTION_ADVENTURE",
+    "genres": ["ACTION_ADVENTURE"],
     "platforms": ["SWITCH"]
   },
   {
@@ -490,7 +490,7 @@
     "releaseDate": "2022-07-29",
     "description": "A massive JRPG with emotional storytelling and huge worlds.",
     "coverImage": "",
-    "genre": "JRPG",
+    "genres": ["JRPG"],
     "platforms": ["SWITCH"]
   },
   {
@@ -501,7 +501,7 @@
     "releaseDate": "2019-10-31",
     "description": "Luigi explores a haunted hotel to rescue his friends.",
     "coverImage": "",
-    "genre": "ADVENTURE",
+    "genres": ["ADVENTURE"],
     "platforms": ["SWITCH"]
   },
   {
@@ -512,7 +512,7 @@
     "releaseDate": "2020-09-28",
     "description": "An open-world action RPG with elemental combat.",
     "coverImage": "",
-    "genre": "ACTION",
+    "genres": ["ACTION"],
     "platforms": ["PC", "PLAYSTATION", "MOBILE"]
   },
   {
@@ -523,7 +523,7 @@
     "releaseDate": "2019-10-01",
     "description": "A mobile FPS with multiplayer and battle royale modes.",
     "coverImage": "",
-    "genre": "FPS",
+    "genres": ["FPS"],
     "platforms": ["MOBILE"]
   },
   {
@@ -534,7 +534,7 @@
     "releaseDate": "2012-08-02",
     "description": "Build a village, train troops, and battle other players.",
     "coverImage": "",
-    "genre": "STRATEGY",
+    "genres": ["STRATEGY"],
     "platforms": ["MOBILE"]
   },
   {
@@ -545,7 +545,7 @@
     "releaseDate": "2018-03-19",
     "description": "A battle royale shooter with large-scale survival gameplay.",
     "coverImage": "",
-    "genre": "BATTLE_ROYALE",
+    "genres": ["BATTLE_ROYALE"],
     "platforms": ["MOBILE"]
   },
   {
@@ -556,7 +556,7 @@
     "releaseDate": "2018-06-15",
     "description": "A social deduction game about teamwork and betrayal.",
     "coverImage": "",
-    "genre": "PUZZLE",
+    "genres": ["PUZZLE"],
     "platforms": ["PC", "PLAYSTATION", "XBOX", "SWITCH", "MOBILE"]
   },
   {
@@ -567,7 +567,7 @@
     "releaseDate": "2023-04-26",
     "description": "A turn-based sci-fi RPG with cinematic storytelling.",
     "coverImage": "",
-    "genre": "RPG",
+    "genres": ["RPG"],
     "platforms": ["PC", "PLAYSTATION", "MOBILE"]
   },
   {
@@ -578,7 +578,7 @@
     "releaseDate": "2012-04-12",
     "description": "A match-three puzzle game with hundreds of levels.",
     "coverImage": "",
-    "genre": "PUZZLE",
+    "genres": ["PUZZLE"],
     "platforms": ["MOBILE"]
   },
   {
@@ -589,7 +589,7 @@
     "releaseDate": "2018-12-12",
     "description": "Fast-paced multiplayer battles with unique characters.",
     "coverImage": "",
-    "genre": "ACTION",
+    "genres": ["ACTION"],
     "platforms": ["MOBILE"]
   },
   {
@@ -600,7 +600,7 @@
     "releaseDate": "2020-10-27",
     "description": "A mobile adaptation of the popular MOBA.",
     "coverImage": "",
-    "genre": "MOBA",
+    "genres": ["MOBA"],
     "platforms": ["MOBILE"]
   },
   {
@@ -611,7 +611,7 @@
     "releaseDate": "2019-03-13",
     "description": "A farming and life simulation game with exploration and crafting.",
     "coverImage": "",
-    "genre": "SIMULATION",
+    "genres": ["SIMULATION"],
     "platforms": ["PC", "PLAYSTATION", "XBOX", "SWITCH", "MOBILE"]
   }
 ]
