@@ -1,8 +1,6 @@
 package com.gamevault.gameservice.service;
 
-import com.gamevault.gameservice.dto.GameCreateRequest;
-import com.gamevault.gameservice.dto.GameDTO;
-import com.gamevault.gameservice.dto.GameUpdateRequest;
+import com.gamevault.gameservice.dto.*;
 import com.gamevault.gameservice.entity.Game;
 import com.gamevault.gameservice.entity.Genre;
 import com.gamevault.gameservice.entity.Platform;
@@ -140,4 +138,17 @@ public class GameService {
         return new HashSet<>(platforms);
     }
 
+    public List<GenreDTO> getAllGenres() {
+        return genreRepository.findAll()
+                .stream()
+                .map(mapper::toGenreDTO)
+                .toList();
+    }
+
+    public List<PlatformDTO> getAllPlatforms() {
+        return platformRepository.findAll()
+                .stream()
+                .map(mapper::toPlatformDTO)
+                .toList();
+    }
 }

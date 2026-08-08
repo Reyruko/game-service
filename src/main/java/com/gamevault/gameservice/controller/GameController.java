@@ -1,8 +1,6 @@
 package com.gamevault.gameservice.controller;
 
-import com.gamevault.gameservice.dto.GameCreateRequest;
-import com.gamevault.gameservice.dto.GameDTO;
-import com.gamevault.gameservice.dto.GameUpdateRequest;
+import com.gamevault.gameservice.dto.*;
 import com.gamevault.gameservice.service.GameService;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
@@ -33,6 +31,16 @@ public class GameController {
     @GetMapping("/latest")
     public List<GameDTO> getLatestGames() {
         return gameService.getLatestGames();
+    }
+
+    @GetMapping("/genres")
+    public List<GenreDTO> getAllGenres() {
+        return gameService.getAllGenres();
+    }
+
+    @GetMapping("/platforms")
+    public List<PlatformDTO> getAllPlatforms() {
+        return gameService.getAllPlatforms();
     }
 
     @PostMapping
