@@ -5,47 +5,74 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import java.time.LocalDateTime;
+
 @RestControllerAdvice
 public class GlobalExceptionHandler{
 
     @ExceptionHandler(GameNotFoundException.class)
-    public ResponseEntity<String> handleGameNotFound(GameNotFoundException ex) {
+    public ResponseEntity<ErrorResponse> handleGameNotFound(GameNotFoundException ex) {
 
-        return ResponseEntity
-                .status(HttpStatus.NOT_FOUND)
-                .body(ex.getMessage());
-    }
-
-    @ExceptionHandler(Exception.class)
-    public ResponseEntity<String> handleUnknownException(Exception ex) {
-
-        return ResponseEntity
-                .status(HttpStatus.INTERNAL_SERVER_ERROR)
-                .body("Something went wrong.");
+        return buildErrorResponse(
+                HttpStatus.NOT_FOUND, ex.getMessage()
+        );
     }
 
     @ExceptionHandler(GameAlreadyExistsException.class)
-    public ResponseEntity<String> handleGameAlreadyExists(GameAlreadyExistsException ex) {
+    public ResponseEntity<ErrorResponse> handleGameAlreadyExists(
+            GameAlreadyExistsException ex) {
 
-        return ResponseEntity
-                .status(HttpStatus.CONFLICT)
-                .body(ex.getMessage());
+        return buildErrorResponse(
+                HttpStatus.CONFLICT,
+                ex.getMessage()
+        );
     }
 
     @ExceptionHandler(GenreNotFoundException.class)
-    public ResponseEntity<String> handleGenreNotFound(GenreNotFoundException ex) {
+    public ResponseEntity<ErrorResponse> handleGenreNotFound(
+            GenreNotFoundException ex) {
 
-        return ResponseEntity
-                .status(HttpStatus.NOT_FOUND)
-                .body(ex.getMessage());
+        return buildErrorResponse(
+                HttpStatus.NOT_FOUND,
+                ex.getMessage()
+        );
     }
 
     @ExceptionHandler(PlatformNotFoundException.class)
-    public ResponseEntity<String> handlePlatformNotFound(PlatformNotFoundException ex) {
+    public ResponseEntity<ErrorResponse> handlePlatformNotFound(
+            PlatformNotFoundException ex) {
+
+        return buildErrorResponse(
+                HttpStatus.NOT_FOUND,
+                ex.getMessage()
+        );
+    }
+
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<ErrorResponse> handleUnknownException(
+            Exception ex) {
+
+        ex.printStackTrace();
+
+        return buildErrorResponse(
+                HttpStatus.INTERNAL_SERVER_ERROR,
+                "Something went wrong."
+        );
+    }
+
+    private ResponseEntity<ErrorResponse> buildErrorResponse(
+            HttpStatus status,
+            String message) {
+
+        ErrorResponse response = new ErrorResponse(
+                status.value(),
+                message,
+                LocalDateTime.now()
+        );
 
         return ResponseEntity
-                .status(HttpStatus.NOT_FOUND)
-                .body(ex.getMessage());
+                .status(status)
+                .body(response);
     }
 
 }
