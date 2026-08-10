@@ -1,6 +1,6 @@
 package com.gamevault.gameservice.dto;
 
-import jakarta.validation.constraints.NotBlank;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,21 +17,13 @@ import java.util.UUID;
 @Builder
 public class GameUpdateRequest {
 
-    @NotBlank
     private String name;
 
-    @NotBlank
-    private String developer;
-
-    @NotBlank
-    private String publisher;
-
+    @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate releaseDate;
 
     @Size(max = 3000)
     private String description;
-
-    private String coverImage;
 
     private Set<UUID> genreIds;
 

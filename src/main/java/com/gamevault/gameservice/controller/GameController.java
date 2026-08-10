@@ -3,6 +3,7 @@ package com.gamevault.gameservice.controller;
 import com.gamevault.gameservice.dto.*;
 import com.gamevault.gameservice.service.GameService;
 import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,13 +11,10 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/games")
+@RequiredArgsConstructor
 public class GameController {
 
     private final GameService gameService;
-
-    public GameController(GameService gameService) {
-        this.gameService = gameService;
-    }
 
     @GetMapping
     public List<GameDTO> getAllGames() {

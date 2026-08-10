@@ -88,13 +88,10 @@ public class GameService {
         Set<Platform> platforms = findPlatforms(request.getPlatformIds());
 
         game.setName(request.getName());
-        game.setDeveloper(request.getDeveloper());
-        game.setPublisher(request.getPublisher());
         game.setDescription(request.getDescription());
         game.setGenres(genres);
         game.setPlatforms(platforms);
         game.setReleaseDate(request.getReleaseDate());
-        game.setCoverImage(request.getCoverImage());
         game.setSlug(slug);
 
         return mapper.toDTO(gameRepository.save(game));
