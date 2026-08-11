@@ -72,8 +72,6 @@ public class GlobalExceptionHandler{
     public ResponseEntity<ErrorResponse> handleUnknownException(
             Exception ex) {
 
-        ex.printStackTrace();
-
         return buildErrorResponse(
                 HttpStatus.INTERNAL_SERVER_ERROR,
                 "Something went wrong."
