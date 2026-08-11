@@ -48,6 +48,26 @@ public class GlobalExceptionHandler{
         );
     }
 
+    @ExceptionHandler(GenreAlreadyExistsException.class)
+    public ResponseEntity<ErrorResponse> handleGenreAlreadyExists(
+            GenreAlreadyExistsException ex) {
+
+        return buildErrorResponse(
+                HttpStatus.CONFLICT,
+                ex.getMessage()
+        );
+    }
+
+    @ExceptionHandler(PlatformAlreadyExistsException.class)
+    public ResponseEntity<ErrorResponse> handlePlatformAlreadyExists(
+            PlatformAlreadyExistsException ex) {
+
+        return buildErrorResponse(
+                HttpStatus.CONFLICT,
+                ex.getMessage()
+        );
+    }
+
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ErrorResponse> handleUnknownException(
             Exception ex) {

@@ -3,6 +3,7 @@ package com.gamevault.gameservice.service;
 import com.gamevault.gameservice.dto.PlatformCreateRequest;
 import com.gamevault.gameservice.dto.PlatformDTO;
 import com.gamevault.gameservice.entity.Platform;
+import com.gamevault.gameservice.exception.PlatformAlreadyExistsException;
 import com.gamevault.gameservice.repository.PlatformRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -17,6 +18,10 @@ public class PlatformService {
 
         Platform platform = new Platform();
         platform.setName(request.getName());
+
+        if (platformRepository.existsByName(platform)) {
+            throw new PlatformAlreadyExistsException();
+        }
 
         Platform savedPlatform = platformRepository.save(platform);
 

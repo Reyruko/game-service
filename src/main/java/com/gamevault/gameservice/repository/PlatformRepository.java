@@ -8,4 +8,6 @@ import java.util.UUID;
 
 public interface PlatformRepository extends JpaRepository<Platform, UUID> {
     Optional<Platform> findByNameIgnoreCase(String name);
+
+    boolean existsByName(Platform platform);
 }
